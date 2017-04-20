@@ -7,3 +7,16 @@ repositories {
 dependencies {
     testCompile "junit:junit:4.12"
 }
+
+task printTestOutput {
+    File output = new File("")
+}
+
+test {
+    testLogging {
+        lifecycle.showStandardStreams = true
+    }
+}
+
+printTestOutput.dependsOn(test)
+build.dependsOn(printTestOutput)

@@ -1,0 +1,11 @@
+# folders
+build/*
+run/*
+.gradle/*
+.settings/*
+bin/*
+out/*
+
+# files
+.project
+.classpath

@@ -4,12 +4,12 @@ jdk:
 
 jobs:
   include:
-    stage: setup
-    script: ./gradlew build
-    stage: test
-    script: ./gradlew test
-    stage: archives
-    script: ./gradlew archive
+    - stage: check
+        script: ./gradlew tasks
+    - stage: build
+        script: ./gradlew build
+    - stage: archives
+        script: ./gradlew archive
 
 env:
   global:

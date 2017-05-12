@@ -1,6 +1,8 @@
 language: java
 jdk: oraclejdk8
 
+script: ./gradlew --help
+
 jobs:
   include:
     - stage: check
